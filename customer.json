@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "KETAV", "city": "Ahmedabad", "email": "ketav@gmail.com" },
+  { "id": 2, "name": "RAM", "city": "Ahmedabad", "email": "ram@gmail.com" },
+  { "id": 3, "name": "MANN", "city": "Kalol", "email": "mann@gmail.com" }
+]

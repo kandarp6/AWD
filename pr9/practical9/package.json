@@ -1,0 +1,13 @@
+﻿{
+  "name": "practical9-file-ops",
+  "version": "1.0.0",
+  "description": "Node.js file operations demo with sync/async read, compress, and decompress",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}

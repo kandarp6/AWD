@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>PRACTICAL 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color:rgb(132, 128, 128);
+            color:bisque;
+            display: flex;
+            flex-direction: row;
+            gap: 200px;
+        }
+        form {
+            max-width: 400px;
+            margin-bottom: 20px;
+            text-align: left;
+
+        }
+        label {
+            display: inline;
+            margin-top: 10px;
+        }
+        input, select {
+            
+            width: 100%;
+            
+            box-sizing: border-box;
+        }
+        #preview {
+            border: 5px solid #ccc;
+            padding: 15px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>SUBMIT YOUR DETAILS</h1>
+        <label for="ernon">Enrolment No:</label>
+        <input type="number" ng-model="erno" name="erno" required><br><br>
+        <label for="name">NAME:</label>
+        <input type="text" ng-model="name" name="name" required><br><br>
+        <label for="branch">BRANCH:</label>
+        <input type="text" ng-model="branch" name="branch" required><br><br>
+        <label for="sem">SEMESTER:</label>
+        <select name="sem" ng-model="sem" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <label for="contact">CONTACT NO:</label>
+        <input type="tel" ng-model="contact" name="contact" required><br><br>
+        <label for="email">EMAIL:</label>
+        <input type="email" ng-model="email" name="email" required><br><br>
+        <label for="age">Address:</label>
+        <input type="text" ng-model="Address" name="Address" required><br><br>
+        <input type="submit" value="SUBMIT">
+        </form>
+        <div id="preview">
+            <h3>Student Details:</h3>
+            <p>Enrolment No: {{ erno }}</p>
+            <p>Name: {{ name }}</p>
+            <p>Branch: {{ branch }}</p>
+            <p>Semester: {{ sem }}</p>
+            <p>Mobile: {{ contact }}</p>
+            <p>Email: {{ email }}</p>
+            <p>Address: {{ Address }}</p>
+        </div>
+</body>
+</html>
+

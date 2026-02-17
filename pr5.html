@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="customerApp">
+<head>
+    <title>Customer Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="customerController">
+
+<h2>Customer Details</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Email</th>
+    </tr>
+
+    <tr ng-repeat="cust in customers">
+        <td>{{cust.id}}</td>
+        <td>{{cust.name}}</td>
+        <td>{{cust.city}}</td>
+        <td>{{cust.email}}</td>
+    </tr>
+</table>
+
+<script>
+var app = angular.module("customerApp", []);
+
+app.controller("customerController", function($scope, $http) {
+
+    $http.get("customers.json")
+    .then(function(response) {
+        $scope.customers = response.data;
+    });
+
+});
+</script>
+
+</body>
+</html>
